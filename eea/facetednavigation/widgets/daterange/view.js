@@ -19,10 +19,12 @@ Faceted.DateRangeWidget = function(wid){
   }
 
   var js_widget = this;
+
+  var date_format = 'dd M, yy';
   this.start.datepicker({
     changeMonth: true,
     changeYear: true,
-    dateFormat: 'yy-mm-dd',
+    dateFormat: date_format,
     yearRange: this.yearRange,
     onSelect: function(date, cal){
       js_widget.select_change(js_widget.start);
@@ -33,7 +35,7 @@ Faceted.DateRangeWidget = function(wid){
     changeMonth: true,
     changeYear: true,
     yearRange: this.yearRange,
-    dateFormat: 'yy-mm-dd',
+    dateFormat: date_format,
     onSelect: function(date, cal){
       js_widget.select_change(js_widget.end);
     }
